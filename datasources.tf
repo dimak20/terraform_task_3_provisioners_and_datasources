@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "example" {
-  name     = "mate-azure-rg"
+  name = "mate-azure-rg"
 }
 
 data "azurerm_virtual_network" "main" {

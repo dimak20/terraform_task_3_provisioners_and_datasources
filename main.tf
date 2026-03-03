@@ -8,7 +8,7 @@ resource "null_resource" "vm_provision" {
       type     = "ssh"
       user     = "testadmin"
       password = "Password1234!"
-      host     = azurerm_public_ip.pip.ip_address
+      host     = data.azurerm_public_ip.pip.ip_address
     }
     inline = [
       "sudo apt-get update",
@@ -23,7 +23,7 @@ resource "null_resource" "vm_provision" {
       type     = "ssh"
       user     = "testadmin"
       password = "Password1234!"
-      host     = azurerm_public_ip.pip.ip_address
+      host     = data.azurerm_public_ip.pip.ip_address
     }
   }
 }
